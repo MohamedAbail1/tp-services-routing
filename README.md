@@ -1,59 +1,80 @@
-# TpServicesRouting
+# 🛒 TP Services Routing - Angular Project
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.6.
+This is a simple Angular application built for practicing:
 
-## Development server
+- Angular routing
+- Services (Dependency Injection)
+- CRUD operations (add / delete products)
+- Login system (basic authentication)
+- Standalone components
 
-To start a local development server, run:
+---
 
+## 🚀 Live Demo
+
+👉 https://MohamedAbail1.github.io/tp-services-routing/
+
+---
+
+## 📁 Project Structure
+
+- **Login page** → Simple authentication (admin login)
+- **Product list** → Display products using a service
+- **Product details** → View product by ID
+- **Not found page** → 404 route handling
+- **ServiceProduit** → Manages product data in memory
+
+---
+
+## 🔐 Login Credentials
+
+Use this to access the app:
+
+- Email: `admin@shop.com`
+- Password: `1234`
+
+---
+
+## ⚙️ Features
+
+### 🧑‍💻 Authentication
+- Simple login validation
+- Redirect to product list on success
+
+### 📦 Product Management
+- View all products
+- Add new product (demo purpose)
+- Delete product
+- View product details
+
+### 🧭 Routing
+- `/login` → Login page
+- `/produits` → Product list
+- `/produit/:id` → Product details
+- `**` → Not found page
+
+---
+
+## 🛠️ Tech Stack
+
+- Angular (Standalone Components)
+- TypeScript
+- Bootstrap (UI styling)
+- Angular Router
+- Angular Forms
+
+---
+
+## 📦 Installation
+
+```bash
+npm install
+```
+## ▶️ Run locally
 ```bash
 ng serve
 ```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Then open:
 
 ```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+http://localhost:4200/

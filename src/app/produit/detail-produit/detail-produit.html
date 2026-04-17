@@ -1,0 +1,21 @@
+<div class="container mt-4" *ngIf="produit; else notFound">
+
+  <div class="card shadow p-3">
+
+    <h3 class="text-primary">{{ produit.nom }}</h3>
+
+    <p><strong>Description :</strong> {{ produit.description }}</p>
+
+    <p><strong>Prix :</strong> {{ produit.prix }} DH</p>
+
+    <p><strong>Quantité :</strong> {{ produit.quantite }}</p>
+
+  </div>
+
+</div>
+
+<ng-template #notFound>
+  <div class="alert alert-danger text-center mt-4">
+    Produit introuvable
+  </div>
+</ng-template>

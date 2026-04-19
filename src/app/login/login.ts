@@ -19,6 +19,7 @@ export class Login {
 
   login() {
     if (this.email === 'admin@shop.com' && this.password === '1234') {
+      localStorage.setItem('token','12345');
       this.router.navigate(['/produits']);
     } else {
       this.error = 'Email ou mot de passe incorrect';

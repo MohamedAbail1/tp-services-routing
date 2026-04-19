@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { ServiceProduit } from '../services/service-produit';
 import { Produit } from '../models/Produit';
-import { RouterLink } from "@angular/router";
+import { Router, RouterLink } from "@angular/router";
 
 @Component({
   selector: 'app-liste-produit',
@@ -13,8 +13,14 @@ export class ListeProduit {
 
    // injection du service
   service = inject(ServiceProduit);
+  router = inject(Router);
 
   products: Produit[] = this.service.getProduits();
+
+  logout() {
+    localStorage.removeItem('token');
+    this.router.navigate(['/login']);
+  }
 
   supprimer(id:number){
     this.service.deleteProduit(id);

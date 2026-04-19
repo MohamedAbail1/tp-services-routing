@@ -4,6 +4,9 @@
   <button class="btn btn-success mb-3 shadow-sm" (click)="ajouter()">
     Ajouter produit
   </button>
+  <button class="btn btn-danger mb-3" (click)="logout()">
+    Logout
+  </button>
   <div class="row">
 
     @for (p of products; track p.id) {

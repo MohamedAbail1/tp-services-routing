@@ -1,44 +1,57 @@
-<div class="container mt-5">
-  <div class="row justify-content-center">
-    <div class="col-md-4">
+<div class="container vh-100 d-flex align-items-center justify-content-center">
 
-      <div class="card shadow">
+  <div class="col-md-4">
 
-        <div class="card-header bg-primary text-white text-center">
-          <h4>🔐 Connexion</h4>
-        </div>
+    <div class="card shadow-lg border-0 rounded-4">
 
-        <div class="card-body">
-
-          <div class="mb-3">
-            <label class="form-label">Email</label>
-            <input
-              [(ngModel)]="email"
-              type="email"
-              class="form-control"
-              placeholder="admin@shop.com">
-          </div>
-
-          <div class="mb-3">
-            <label class="form-label">Mot de passe</label>
-            <input
-              [(ngModel)]="password"
-              type="password"
-              class="form-control">
-          </div>
-
-          <button (click)="login()" class="btn btn-primary w-100">
-            Se connecter
-          </button>
-
-          <p *ngIf="error" class="text-danger mt-2 text-center">
-            {{ error }}
-          </p>
-
-        </div>
-
+      <!-- Header -->
+      <div class="card-header bg-gradient text-white text-center rounded-top-4"
+           style="background: linear-gradient(135deg, #3b82f6, #6366f1);">
+        <h4 class="mb-0 text-black">Connexion</h4>
+        <small class="opacity-75">Accédez à votre espace</small>
       </div>
 
+      <!-- Body -->
+      <div class="card-body p-4">
+
+        <!-- Email -->
+        <div class="mb-3">
+          <label class="form-label fw-semibold">Email</label>
+          <input
+            [(ngModel)]="email"
+            type="email"
+            class="form-control rounded-3"
+            placeholder="admin@shop.com">
+        </div>
+
+        <!-- Password -->
+        <div class="mb-3">
+          <label class="form-label fw-semibold">Mot de passe</label>
+          <input
+            [(ngModel)]="password"
+            type="password"
+            class="form-control rounded-3"
+            placeholder="1234">
+        </div>
+
+        <!-- Button -->
+        <button
+          (click)="login()"
+          class="btn w-100 text-white rounded-3"
+          style="background: linear-gradient(135deg, #3b82f6, #6366f1);">
+
+          Se connecter
+        </button>
+
+        <!-- Error -->
+        <p *ngIf="error"
+           class="text-danger mt-3 text-center small fw-semibold">
+          {{ error }}
+        </p>
+
+      </div>
     </div>
+
   </div>
+
 </div>
